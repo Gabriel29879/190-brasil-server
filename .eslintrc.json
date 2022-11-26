@@ -1,0 +1,54 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "functional"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:functional/no-mutations",
+    "plugin:functional/stylistic",
+    "plugin:functional/no-object-orientation",
+    "plugin:functional/no-exceptions",
+    "plugin:functional/external-recommended"
+  ],
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-nested-ternary": ["warn"],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true,
+        "allowTaggedTemplates": false
+      }
+    ],
+    "no-useless-escape": ["off"],
+    "prefer-destructuring": ["warn"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-trailing-spaces": ["error"],
+    "no-console": ["warn"],
+    "functional/no-method-signature": "off",
+    "@typescript-eslint/prefer-readonly-parameter-types": "off"
+  }
+}

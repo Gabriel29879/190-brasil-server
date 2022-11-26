@@ -1,0 +1,6 @@
+.eslintrc.js
+node_modules
+dist
+jest.config.js
+coverage
+jest-mongodb-config.js
